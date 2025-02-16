@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavbarPage with Tabs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .fixed-row img {
+            height: 300px; 
+            margin: 20px; 
+            border: 5px solid #F5F5F5;
+            text-align: center;
+        }
+        a {
+            color: #560C2B; /* Default hyperlink color */
+            text-decoration: none; /* Removes underline */
+        }
+        a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Daniel Sánchez Kelly</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" data-tab="about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-tab="academics">Academics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-tab="debating">Debating</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-tab="contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-tab="pdf">CV</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content (Tabs) -->
+<div class="container mt-4">
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="about">
+            <div class="row">
+                <div class="col-sm-4", style="text-align: center;">
+                    <div class="fixed-row">
+                        <img src="files/foto.jpeg" alt="Logo"> 
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <h2 style="font-weight: 600; margin-top: 20px">About Me</h2>
+                    <div style="text-align: justify; margin-bottom: 20px;">
+                        I'm an Economist from <a href="https://cee.colmex.mx" target="_blank"><i>El Colegio de México</i></a>, currently working as a 
+                        Data Scientist at Mexico's <a href="https://www.gob.mx/atdt" target="_blank"><i>Agencia de Transformación Digital y Telecomunicaciones</i></a>. 
+                        My work is focused on developing web applications using Shiny, JavaScript and PostgreSQL, as well as providing various insights 
+                        from a variety of public and confidential data sources. I'm comfortable working with micro-econometrics and time-series, and I'm highly 
+                        experienced in data visualization and visual storytelling. I have strong quantitative and statistical programming skills, specifically
+                        in R.
+                    </div>
+                    <ul>
+                        <li>Alan Bean</li>
+                        <li>Peter Conrad</li>
+                        <li>Edgar Mitchell</li>
+                        <li>Alan Shepard</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="academics">
+            <h2>About</h2>
+            <p>This is the about section.</p>
+        </div>
+        <div class="tab-pane fade" id="debating">
+            <h2 style="font-weight: 600;">Debating</h2>
+            <div style="text-align: justify; margin-top: 20px">
+                As part of my academic formation, I also participated on a variety of British Parlamentary Debating championships. I coached 
+                the debating team from <a href="https://www.itam.mx" target="_blank"><i>Instituto Tecnológico Autónomo de México</i></a> on the academic year
+                2023-2024. During this academic term, students from ITAM became national Finalist and world Quarter-Finalist.
+            </div>
+            <h4 style="margin-top: 20px; margin-bottom: 20px;">Training sessions at ITAM</h4>
+            <div>
+                To contribute to the preparation of other teams, I publish here the sessions used for training at ITAM. All sessions are 
+                based on the debating Manual for <i>Campeonato Mundial Universitario de Debate en Español</i> Colombia 2024.
+            </div>
+        </div>
+        <div class="tab-pane fade" id="contact">
+            <h2>Contact</h2>
+            <p>Get in touch with us.</p>
+        </div>
+        <div class="tab-pane fade" id="pdf">
+            <iframe 
+            src="https://drive.google.com/file/d/1QFv4W0m6F3QYAeb8DTBE220sV_SKo7tq/preview" 
+            width="100%" 
+            height="800px">
+        </iframe>
+        </div>
+    </div>
+</div>
+
+<!-- Link to External JavaScript File -->
+<script src="tabs.js"></script>
+
+</body>
+</html>
