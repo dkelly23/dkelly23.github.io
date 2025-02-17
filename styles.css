@@ -1,0 +1,11 @@
+/* División de texto fluido */
+.fluid{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.img-ct{
+    border: 5px solid #F5F5F5;
+    margin-bottom: 20px;
+    padding: 30px;
+}

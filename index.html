@@ -6,6 +6,11 @@
     <title>NavbarPage with Tabs</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" async
+      src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         .fixed-row img {
             height: 300px; 
@@ -41,6 +46,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" data-tab="debating">Debating</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-tab="misc">Miscelaneous</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" data-tab="contact">Contact</a>
@@ -84,6 +92,8 @@
             </div>
 
         </div>
+
+
         <div class="tab-pane fade" id="academics">
 
             <h2 style="font-weight: 600;">Academics</h2>
@@ -94,31 +104,80 @@
                 B.Sc. Thesis: <i>Productivity Effects of Direct Transfers in Rural Mexico: Sembrando Vida</i>
             </h3>
 
-            <div>
+            <div class="fluid">
                 The final project of my undergraduate studies in Economics at COLMEX is a micro-econometric analysis of the productivity effects of
                 <i>Sembrando Vida</i>, a large scale, unconditional transfers program to rural subjects, enacted by Mexico's federal administration
-                in 2018. 
+                in 2018. This section provides a general overview of the main results. The whole code repository to reproduce these results can be
+                found <a href="https://github.com/dkelly23/SembrandoVida">here</a>
             </div>
 
+            <div class="fluid">
+                For this study, I aggregated data from four different sources: (1) <a href="https://pub.bienestar.gob.mx/v2/pub/"><i>Padrón Único de Beneficiarios</i></a>,
+                a public data-source containing information on all recipients of social programs in Mexico; (2) <a href="https://www.gob.mx/siap/acciones-y-programas/produccion-agricola-33119"><i>Sistema de Información Agroalimentaria y Pesquera</i></a>,
+                a dataset containing agricultural production and productivity, disaggregated by municipality and crop, with monthly observations; (3) <a href="https://smn.conagua.gob.mx/es/climatologia/temperaturas-y-lluvias/resumenes-mensuales-de-temperaturas-y-lluvias"><i>Reportes Mensuales de Temperaturas y Lluvias</i></a>,
+                information published by the National Water Service of Mexico reporting average temperature and total m.m. of rain; and (4) <a href="https://www.gob.mx/ran"><i>Registro Agrario Nacional</i></a>,
+                a comprehensive survey of Social Property in Mexico.
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6" style="text-align: center;">
+                    <p style="font-weight: 600;">Percentage of Municipalities under Collective Ownership</p>
+                    <img src="imgs/ejidos.png" alt="asd" width="90%" class="img-ct">
+                </div>
+                <div class="col-sm-6" style="text-align: center;">
+                    <p style="font-weight: 600;">Number of Beneficiaries by Municipality</p>
+                    <img src="imgs/beneficiarios.png" alt="" width="90%" class="img-ct">
+                </div>
+            </div>
+
+            <div class="fluid">
+                I seek to answer whether the application of <i>Sembrando Vida</i> had an effect on agricultural productivity on the rural areas of Mexico. To do so,
+                I exploited the staggered nature of SV's application, and thus, use the Event Study design proposed by <a href="https://academic.oup.com/restud/article/91/6/3253/7601390?login=false">Borusyak, et. Al (2024)</a>.
+                To analyze this question, I built a simple productivity metric, defined as yield per unit of land. If \(y_{i,t}\) is such productivity metric,
+                then our methodology seeks to estimate the discrete effect of a unit increase in the number of beneficiaries, conditional on all other regressors:
+            </div>
+
+            \[
+            \beta_m  =  E[Y_{i,m}(b_{i,m}=1) | \mathbf{x}_{i,m}] - E[Y_{i,m}(b_{i,m}=0) | \mathbf{x}_{i,m}]
+            \]
+
+
+            <div class="fluid" style="margin-top: 20px;">
+                changes
+            </div>
+
+            <div class="fluid">
+                Using municipality-level data obtained from Mexican authorities, we find a short-lived, positive and statistically significant effect 
+                on agricultural productivity as well as no evidence that these changes are induced by increases in the capital stock of rural households. 
+                Our results point to a severe lack of follow-ups from local authorities to the program's beneficiaries, limiting its potential effects. 
+                Further research is needed to determine the transmission mechanisms of this policy.
+            </div>
+
+                
+
         </div>
+
+
         <div class="tab-pane fade" id="debating">
 
             <h2 style="font-weight: 600;">Debating</h2>
 
             <div style="text-align: justify; margin-top: 20px">
-                As part of my academic formation, I also participated on a variety of British Parliamentary Debating championships. I coached 
-                the debating team from <a href="https://www.itam.mx" target="_blank"><i>Instituto Tecnológico Autónomo de México</i></a> on the academic year
+                Another one of my passions is academic and competitive debating. Because of this, I have participated on a variety of British 
+                Parliamentary Debating championships over the last few years. I also coached the debating team from 
+                <a href="https://www.itam.mx" target="_blank"><i>Instituto Tecnológico Autónomo de México</i></a> on the academic year
                 2023-2024. During this academic term, students from ITAM became national Finalist and world Quarter-Finalist.
             </div>
 
             <div style="border-bottom: 2px solid #777777; margin-top: 40px; margin-bottom: 40px"></div>
 
             <h3 style="margin-top: 20px; margin-bottom: 20px; text-align: justify;">Training sessions at ITAM</h3>
-            <div>
+            <div style="text-align: justify;">
                 To contribute to the preparation of other teams, I am publishing here the sessions used for training at ITAM. 
                 All sessions are based on the debating manual for the <i>Campeonato Mundial Universitario de Debate en Español</i> Colombia 2024. 
-                In the last part, I’ve also borrowed heavily from the <b>Handbook of Argumentation Theory</b> by Frans H. van Emeren et al. Due 
-                to their length, most sessions span more than one class.
+                In the last part, I've also borrowed heavily from the <b>Handbook of Argumentation Theory</b> by Frans H. van Emeren et al. Due 
+                to their length, most sessions span more than one class. All course information, as well as other relevant information can be 
+                found <a href="https://drive.google.com/drive/folders/1jpbdST9ZAZbTg6TFTTIIGvOqSh1XTg8k?usp=sharing" target="_blank"><i>here</i></a>.
             </div>
 
             <div style="margin-top: 40px; margin-bottom: 40px"></div>
@@ -133,7 +192,7 @@
                 </div>
                 <div class="col-sm-8">
                   <h4 style="font-weight: 600;">Session 0</h4>
-                  <div style="margin-top: 20px">
+                  <div style="margin-top: 20px; text-align: justify;">
                     I provide a general introduction to the material of the course. Highlighting the material to be covered, and the 
                     big-picture reasons as to why doing debate, and in particular, British Parliamentary. An introductory activity is also 
                     included for students to start developing critical thinking tools. Finally, students are encouraged to take the Political
@@ -154,7 +213,7 @@
                 </div>
                 <div class="col-sm-8">
                   <h4 style="font-weight: 600;">Session 1</h4>
-                  <div style="margin-top: 20px">
+                  <div style="margin-top: 20px; text-align: justify;">
                     I provide a general overview of British Parliamentary debating, highlighting its key features and differences with other
                     debating models, as well as the different roles each speaker has. I also go over the basics of participating in a BP championship.
                     Participants are encouraged to engage in an activity aimed at showing basic argumentation skills. Finally, I present a general
@@ -175,8 +234,13 @@
                 </div>
                 <div class="col-sm-8">
                   <h4 style="font-weight: 600;">Session 2</h4>
-                  <div style="margin-top: 20px">
-                    
+                  <div style="margin-top: 20px; text-align: justify;">
+                    This is the first content-heavy session, focused in introducing participants to three concepts widely used on BP debating:
+                    (1) An average reasonable voter; (2) Burden of proof and metrics; and (3) Framing. Participants are also introduced to the 
+                    way persuasion works and is evaluated within BP. Multiple real examples are offered to provide excercises to apply this 
+                    concepts to real life debates. Participants are also introduced to the two types of motions often debated on BP, which are 
+                    the topic of the following sessions. It is adviced to divide this content into two or three 1:30 hour sessions.
+
                   </div>
                 </div>
             </div>
@@ -193,7 +257,7 @@
                 </div>
                 <div class="col-sm-8">
                   <h4 style="font-weight: 600;">Session 3</h4>
-                  <div style="margin-top: 20px">
+                  <div style="margin-top: 20px; text-align: justify;">
                     
                   </div>
                 </div>
@@ -211,7 +275,7 @@
                 </div>
                 <div class="col-sm-8">
                   <h4 style="font-weight: 600;">Session 4</h4>
-                  <div style="margin-top: 20px">
+                  <div style="margin-top: 20px; text-align: justify;">
                     
                   </div>
                 </div>
@@ -229,18 +293,30 @@
                 </div>
                 <div class="col-sm-8">
                   <h4 style="font-weight: 600;">Session 5</h4>
-                  <div style="margin-top: 20px">
+                  <div style="margin-top: 20px; text-align: justify;">
                     
                   </div>
                 </div>
             </div>
 
+        </div>
+        <div class="tab-pane fade" id="misc">
+            <h2 style="font-weight: 600;">Miscelaneous</h2>
+            <p>Get in touch with us.</p>
+        </div>
 
         </div>
         <div class="tab-pane fade" id="contact">
-            <h2>Contact</h2>
-            <p>Get in touch with us.</p>
+            <h2 style="font-weight: 600;">Contact</h2>
+            <p>You can get in touch with me via:</p>
+            <ul>
+                <li><b>LinkedIn: </b><a href="https://www.linkedin.com/in/daniel-de-jesús-sánchez-kelly-99a460185/" target="_blank"><i>linkedIn.com</i></a></li>
+                <li><b>Work Email: </b><a href="mailto:daniel.kelly@transformaciondigital.gob.mx" target="_blank"><i>daniel.kelly@transformaciondigital.gob.mx</i></a></li>
+                <li><b>Academic Email: </b><a href="mailto:djsanchez@colmex.mx" target="_blank"><i>djsanchez@colmex.mx</i></a></li>
+                <li><b>Personal Email: </b><a href="mailto:d.sanchezkelly@gmail.com" target="_blank"><i>d.sanchezkelly@gmail.com</i></a></li>
+            </ul>
         </div>
+
         <div class="tab-pane fade" id="pdf">
             <iframe 
                 src="https://drive.google.com/file/d/1QFv4W0m6F3QYAeb8DTBE220sV_SKo7tq/preview" 
