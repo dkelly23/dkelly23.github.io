@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NavbarPage with Tabs</title>
+    <title>Daniel Sánchez Kelly</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="styles.css">
@@ -11,6 +11,10 @@
       src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script type="text/javascript" async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-r.min.js"></script>
+
     <style>
         .fixed-row img {
             height: 300px; 
@@ -24,6 +28,14 @@
         }
         a:hover {
             text-decoration: underline; /* Underline on hover */
+        }
+        pre {
+            font-size: 0.6em; /* Adjust font size */
+            height: 800px; /* Fixed height for scrollable window */
+            overflow-y: auto; /* Enable vertical scrolling */
+            background-color: #f4f4f4; /* Optional background color */
+            padding: 10px; /* Padding for better readability */
+            border-radius: 5px; /* Rounded corners */
         }
     </style>
 </head>
@@ -45,10 +57,10 @@
                     <a class="nav-link" href="#" data-tab="academics">Academics</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-tab="debating">Debating</a>
+                    <a class="nav-link" href="#" data-tab="repo">Code Repo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-tab="misc">Miscelaneous</a>
+                    <a class="nav-link" href="#" data-tab="debating">Debating</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" data-tab="contact">Contact</a>
@@ -64,6 +76,7 @@
 <!-- Page Content (Tabs) -->
 <div class="container mt-4">
     <div class="tab-content">
+
         <div class="tab-pane fade show active" id="about">
             <div class="row">
                 <div class="col-sm-4", style="text-align: center;">
@@ -122,10 +135,6 @@
                     <p style="font-weight: 600;">Number of Beneficiaries by Municipality</p>
                     <img src="imgs/beneficiarios.png" alt="" width="90%" class="img-ct">
                 </div>
-            </div>
-
-            <div>
-                For the purposes of this analysis
             </div>
 
             <div class="fluid">
@@ -215,29 +224,26 @@
                     <div style="margin-top: 20px; margin-bottom: 20px;">
                         <ul>
                             <li>
-                                <a href="files/macro/lab1.pdf" target="_blank"><i>Laboratorio 1:</i></a> Students are asked to search for and built visualizations
-                                regarding some national accounts of Mexico.
+                                <a href="files/econometria/Tarea1.pdf" target="_blank"><i>Laboratorio 1:</i></a> Covers chapter 10 of <i>Introductory Econometrics: A Modern Approach</i>,
+                                and deals with the basics of time-series regression.
                             </li>
                             <li>
-                                <a href="files/macro/lab2_1.pdf" target="_blank"><i>Laboratorio 2:</i></a> Students are asked to solve exercises to review micro-founded
-                                macroeconomic models with multiple periods (both finite and infinite).
+                                <a href="files/econometria/Tarea2.pdf" target="_blank"><i>Laboratorio 2:</i></a> Covers chapters 11 and 12 of <i>Introductory Econometrics: A Modern Approach</i>,
+                                and deals with serial correlation and heteroskedasticity in time series, as well as the hypothesis tests relevant to such topics.
                             </li>
                             <li>
-                                <a href="files/macro/lab2_2.pdf" target="_blank"><i>Laboratorio 3:</i></a> Students are asked to derive the movement equations of the 
-                                Solow-Swan model in discrete time as well as analytic forms of growth rates. Closed forms solutions for the model are also required.
+                                Pending...
                             </li>
                         </ul>
                     </div>
                     <div>
-                        The rest of the T.A. sessions were devoted to reviewing the theoretical material of the course. It's content aligns with the sessions
-                        outlined on the syllabus.
+                        The complete material for the T.A. sessions can be found on <a href="https://github.com/dkelly23/econometriaII" target="_blank">this repository</a>. Feel free to fork it.
                     </div>
                   </div>
                 </div>
             </div>
 
         </div>
-
 
         <div class="tab-pane fade" id="debating">
 
@@ -382,9 +388,1870 @@
 
         </div>
 
-        <div class="tab-pane fade" id="misc">
-            <h2 style="font-weight: 600;">Miscelaneous</h2>
-            <p>Get in touch with us.</p>
+        <div class="tab-pane fade" id="repo">
+            <h2 style="font-weight: 600;">Code Repository</h2>
+
+            <div style="border-bottom: 2px solid #777777; margin-top: 40px; margin-bottom: 40px"></div>
+
+            <h3 style="margin-top: 20px; margin-bottom: 20px; text-align: justify;">Web Applications</h3>
+
+            <div class="fluid">
+                My main task at <a href="https://www.gob.mx/atdt" target="_blank"><i>Agencia de Transformación Digital y Telecomunicaciones</i></a> has been 
+                developing web applications to follow up a wide variety of indicators relevant to the Federal Administration of Mexico. Due to confidentiality 
+                reasons, I cannot directly share the code. However, I share remote access to the four most recent applications I've developed. All information
+                displayed on these mock dashboards has been randomly generated. The final version of the applications used by the Mexican Government are hosted
+                on Shiny Server running on RedHat.
+            </div>
+
+            <div class="fluid" style="margin-top: 20px;">
+                <ul>
+                    <li>
+                        <a href="https://danielkelly23.shinyapps.io/seguridad/" target="_blank"><i>Seguridad</i>:</a> This dashboard provides
+                        a complete cover of crimes in Mexico. It contains disaggregation to the municipality level, and allows filtering by geographic location and
+                        type of crimes. It also contains a general summary for each state. Development time: 3 weeks.
+                        <div style="border: 5px solid #F5F5F5; text-align: center; margin-top: 10px; margin-bottom: 30px;">
+                            <img src="files/seguridad.png" width="100%">
+                        </div>
+                    </li>
+                    <li style="margin-top: 20px">
+                        <a href="https://danielkelly23.shinyapps.io/migracion/" target="_blank"><i>Centros de Atención a Migrantes</i>:</a> This dashboard provides
+                        follow-up to the occupation of several immigration shelters, operated by the Mexican Government on the northern frontier of the country. Development time:
+                        4 days.
+                        <div style="border: 5px solid #F5F5F5; text-align: center; margin-top: 10px; margin-bottom: 30px;">
+                            <img src="files/migrantes.png" width="100%">
+                        </div>
+                    </li>
+                    <li style="margin-top: 20px">
+                        <a href="https://danielkelly23.shinyapps.io/aduanas/" target="_blank"><i>Recaudación en Aduanas</i>:</a> This dashboard provides
+                        follow-up to the collection of taxes at Mexico's customs, with information disaggregated by custom, and authority in charge.
+                        <div style="border: 5px solid #F5F5F5; text-align: center; margin-top: 10px; margin-bottom: 30px;">
+                            <img src="files/aduanas.png" width="100%">
+                        </div>
+                    </li>
+                    <li style="margin-top: 20px">
+                        <a href="https://danielkelly23.shinyapps.io/becabj/" target="_blank"><i>Beca Benito Juárez</i>:</a> This dashboard provides
+                        follow-up to the advances in the registry for <i>Beca del Bienestar Benito Juárez</i>. It contains information disaggregated to the school level,
+                        as well as geographic visualizations.
+                        <div style="border: 5px solid #F5F5F5; text-align: center; margin-top: 10px; margin-bottom: 30px;">
+                            <img src="files/bbj.png" width="100%">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div style="border-bottom: 2px solid #777777; margin-top: 40px; margin-bottom: 40px"></div>
+
+            <h3 style="margin-top: 20px; margin-bottom: 20px; text-align: justify;">Code Library</h3>
+
+            <h4><b>Project:</b> <i>Análisis de la Encuesta de Seguridad Urbana</i></h4>
+            <pre><code class="language-r">
+# ______________________________________________________________________________
+#
+# Proyecto:       Reporte de la Encuesta Nacional de Seguridad Urbana
+#
+# Script:         analisis_ensu.R
+# Objetivo:       Tabulados preeliminares de la ENSU, espera a actualizarse.
+#
+# Autor:          Daniel Kelly
+# Email:          djsanchez@colmex.mx
+#
+# Fecha:          14 de octubre de 2024
+#
+# ______________________________________________________________________________
+
+# PREAMBULO --------------------------------------------------------------------
+
+# setwd("/Users/danielkelly/Library/Mobile Documents/com~apple~CloudDocs/ATDyT/Entrega 2 - ENSU/ENSU")
+
+rm( list=ls() )
+
+# librerias
+
+pacman::p_load(tidyverse, readxl, openxlsx, foreign, svglite)
+
+library(foreign)
+
+remotes::install_github("dkelly23/ggmx")
+library(ggmx)
+
+# idioma
+Sys.setlocale("LC_ALL", "es_ES.UTF-8")
+Sys.setenv(LANG = "es_MX.UTF-8")
+
+
+# CÓDIGO -----------------------------------------------------------------------
+
+## Data ------------------------------------------------------------------------
+
+# Objeto de meses y años:
+meses <- c("marzo", "junio", "septiembre", "diciembre")
+years <- 2018:2024
+
+y<- 2024
+m <- meses[3]
+
+# Loop para importar archivos:
+dfs <- character()
+dfs_list <- list()
+for (y in (years)) {
+  for (m in (meses)) {
+    # Imprimir progreso:
+    cat('yacasi ')
+    # Extensión de los archivos:
+    if (y > 2020) {
+    extension <- "csv"
+    leerdatos <- function(x,...) { read_csv(x, ...) }
+    } else if (y<=2020) {
+      extension <- "dbf"
+      leerdatos <- function(x,...) { read.dbf(x, ...) }
+    }
+    # Directorio para los archivos:
+    path <- file.path("input", y, paste(m, y, sep="-"), paste("CB", extension, sep="."))
+    # Error handeling:
+    if (file.access(path, mode=4)!=0) {
+      print("Archivo inaccesible." )
+      next
+    } else {
+      # Asignación trimestre-mes:
+      trimestre <- case_when(
+        m ==  "marzo" ~ "T1",
+        m ==  "junio" ~ "T2",
+        m ==  "septiembre" ~ "T3",
+        m ==  "diciembre" ~ "T4"
+      )
+      # Nombre del archivo:
+      name <- paste0(trimestre, "_", y)
+      # Vector con nombres de los archivos:
+      dfs <- c(dfs, name)
+      # Guardar los df's con la información en una lista:
+      dfs_list[[name]] <- leerdatos(path) %>% mutate(cve=paste0(CVE_ENT, CVE_MUN))
+    }
+  }
+}
+
+# Remover objetos generados dentro del loop:
+rm(extension, m, name, path, trimestre, y)
+
+# Cargar objetos:
+save(dfs_list, file="output/dfs_list.RData")
+load("output/dfs_list.RData")
+dfs <- names(dfs_list)
+meses <- c("marzo", "junio", "septiembre", "diciembre")
+years <- 2018-2024
+
+# Df con población por municipio:
+poblacion <- read.csv("input/poblacion.csv") %>%
+  filter(NOM_LOC=="Total del Municipio") %>%
+  mutate(
+    cve_ent=ifelse(nchar(ENTIDAD)==1, paste0("0", ENTIDAD), as.character(ENTIDAD)),
+    cve_mun=case_when(
+      nchar(MUN)==1 ~ paste0("00", MUN),
+      nchar(MUN)==2 ~ paste0("0", MUN),
+      nchar(MUN)==3 ~ as.character(MUN)
+    ),
+    cve=paste0(cve_ent, cve_mun)
+         ) %>%
+  select(cve, poblacion=POBTOT)
+
+
+## Script ----------------------------------------------------------------------
+
+dependencias <- c("Policia Municipal", "Policia Estatal",
+                  "Guardia Nacional", "Ejercito", "Marina")
+
+identificadores <- c("FAC_SEL", "cve", "SEXO", "EDAD", "CD")
+
+### Correspondencia Ciudad-Municipio -------------------------------------------
+
+# Base de datos más reciente:
+base <- tail(dfs_list, 1)[[1]]
+
+# Combinaciones únicas de ciudad y municipio:
+cd_mun <- bind_cols(cve=base$cve, cd=base$CD)
+cd_mun <- unique(cd_mun) 
+
+# Población por municipio:
+pob_mun <- filter(poblacion, cve %in% cd_mun$cve) %>%
+  left_join(cd_mun)
+
+# Población por ciudad:
+pob_cd <- pob_mun %>%
+  group_by(cd) %>%
+  summarise(
+    poblacion=sum(poblacion)
+  ) %>%
+  mutate(cd=as.numeric(cd))
+  
+### Indices de Percepción ------------------------------------------------------
+
+#### Confianza -----------------------------------------------------------------
+
+# Variables de interés por año:
+confianzaT1_2020 <- c("BP1_9_1", "BP1_9_2", "BP1_9_4", "BP1_9_5", "BP1_9_6")
+
+    confianzaT1_2018 <- confianzaT1_2020
+    confianzaT2_2018 <- confianzaT1_2020
+    confianzaT3_2018 <- confianzaT1_2020
+    confianzaT4_2018 <- confianzaT1_2020
+    confianzaT1_2019 <- confianzaT1_2020
+    confianzaT2_2019 <- confianzaT1_2020
+    confianzaT3_2019 <- confianzaT1_2020
+    confianzaT4_2019 <- confianzaT1_2020
+
+confianzaT4_2020 <- c("BP1_10_1", "BP1_10_2", "BP1_10_3", "BP1_10_4", "BP1_10_5")
+confianzaT1_2024 <- c("BP1_9_1", "BP1_9_2", "BP1_9_3", "BP1_9_4", "BP1_9_6")
+confianzaT2_2024 <- c("BP1_9_1", "BP1_9_2", "BP1_9_3", "BP1_9_4", "BP1_9_6")
+confianzaT3_2024 <- c("BP1_9_1", "BP1_9_2", "BP1_9_3", "BP1_9_4", "BP1_9_6")
+confianzaT4_2024 <- c("BP1_9_1", "BP1_9_2", "BP1_9_3", "BP1_9_4", "BP1_9_6")
+
+confianza <- c("BP1_9_1", "BP1_9_2", "BP1_9_3", "BP1_9_4", "BP1_9_5")
+
+
+variables_conf <- character()
+for (y in 2021:2023) {
+  for (t in c("T1", "T2", "T3", "T4")) {
+    assign(paste0("confianza", t, "_", y), confianza)
+    variables_conf <- c(variables_conf, paste0("confianza", t, "_", y))
+  }
+}
+
+# Vector con los nombres de los dfs modificados:
+dfs_conf <- paste0("conf_",dfs)
+
+# Selección de variables:
+for (d in seq_along(dfs_conf)) {
+  mes <- case_when(
+    substr(dfs_conf[d], 6,7) == "T1" ~ "03-01",
+    substr(dfs_conf[d], 6,7) == "T2" ~ "06-01",
+    substr(dfs_conf[d], 6,7) == "T3" ~ "09-01",
+    substr(dfs_conf[d], 6,7) == "T4" ~ "12-01"
+  )
+  conf <- get(paste0("confianza", dfs[d]))
+  
+  if (d>=11) {
+    x <- dfs_list[[ dfs[d] ]][c(identificadores, conf)]
+  } else if (d %in% 1:10) {
+    x <- dfs_list[[ dfs[d] ]][c(c("FAC_SEL", "cve", "CD"), conf)] %>%
+      mutate(SEXO=as.numeric(NA), EDAD=as.numeric(NA)) %>%
+      relocate(SEXO, .after = cve) %>%
+      relocate(EDAD, .after = SEXO)
+  }
+  
+  names(x) <- c(identificadores, "municipal", "estatal", "gn", "ejercito", "marina")
+  x <- x %>% mutate(across(everything(), as.numeric)) %>%
+    mutate(
+      fecha=as.Date(paste(substr(dfs_conf[d], 9, nchar(dfs_conf[d])), mes, sep="-"), SEXO=as.numeric(SEXO)),
+    ) 
+  assign(dfs_conf[d], as.data.frame(x)) 
+  
+}
+rm(x)
+rm(confianza)
+rm(list=variables_conf)
+rm(list=c("confianzaT1_2020", "confianzaT1_2024", "confianzaT2_2024", "confianzaT4_2020",
+          "confianzaT1_2018", "confianzaT2_2018", "confianzaT3_2018", "confianzaT4_2018",
+          "confianzaT1_2019", "confianzaT2_2019", "confianzaT3_2019", "confianzaT4_2019",
+          "confianzaT3_2024"))
+
+
+# Lista con los archivos terminados:
+dfs_conf_list <- list()
+for (d in dfs_conf) {
+  dfs_conf_list[[d]] <- get(d)
+}
+rm(list=dfs_conf)
+
+# Df Agregado:
+conf <- bind_rows(dfs_conf_list) %>%
+  filter(if_any(all_of(c("municipal", "estatal", "gn", "ejercito", "marina")), is.na))
+
+# Reescalar respuestas:
+for (c in c("municipal", "estatal", "gn", "ejercito", "marina")) {
+  conf[[c]] = case_when(
+    conf[[c]] == 1 ~ 1,
+    conf[[c]] == 2 ~ 1,
+    conf[[c]] == 3 ~ 0,
+    conf[[c]] == 4 ~ 0,
+    conf[[c]] == 9 ~ NA
+  )
+}
+
+# Datos en formato tidy:
+conf_long <- pivot_longer(
+  conf,
+  cols=c("municipal", "estatal", "gn", "ejercito", "marina"),
+  names_to="institucion",
+  values_to="confianza"
+)
+
+#### Efectividad ---------------------------------------------------------------
+
+# Variables de interés por año:
+efectividadT1_2020 <- c("BP1_8_1", "BP1_8_2", "BP1_8_4", "BP1_8_5", "BP1_8_6")
+
+    efectividadT1_2018 <- efectividadT1_2020
+    efectividadT2_2018 <- efectividadT1_2020
+    efectividadT3_2018 <- efectividadT1_2020
+    efectividadT4_2018 <- efectividadT1_2020
+    efectividadT1_2019 <- efectividadT1_2020
+    efectividadT2_2019 <- efectividadT1_2020
+    efectividadT3_2019 <- efectividadT1_2020
+    efectividadT4_2019 <- efectividadT1_2020
+
+efectividadT4_2020 <- c("BP1_9_1", "BP1_9_2", "BP1_9_3", "BP1_9_4", "BP1_9_5")
+efectividadT1_2024 <- c("BP1_8_1", "BP1_8_2", "BP1_8_3", "BP1_9_4", "BP1_8_6")
+efectividadT2_2024 <- c("BP1_8_1", "BP1_8_2", "BP1_8_3", "BP1_8_4", "BP1_8_6")
+efectividadT3_2024 <- c("BP1_8_1", "BP1_8_2", "BP1_8_3", "BP1_8_4", "BP1_8_6")
+efectividadT4_2024 <- c("BP1_8_1", "BP1_8_2", "BP1_8_3", "BP1_8_4", "BP1_8_6")
+
+efectividad <- c("BP1_8_1", "BP1_8_2", "BP1_8_3", "BP1_8_4", "BP1_8_5")
+
+variables_ef <- character()
+for (y in 2021:2023) {
+  for (t in c("T1", "T2", "T3", "T4")) {
+    assign(paste0("efectividad", t, "_", y), efectividad)
+    variables_ef <- c(variables_ef, paste0("efectividad", t, "_", y))
+  }
+}
+
+# Objeto con los nombres de los dfs modificados:
+dfs_ef <- paste0("ef_",dfs)
+
+
+# Selección de variables:
+for (d in seq_along(dfs_ef)) {
+  mes <- case_when(
+    substr(dfs_ef[d], 4,5) == "T1" ~ "03-01",
+    substr(dfs_ef[d], 4,5) == "T2" ~ "06-01",
+    substr(dfs_ef[d], 4,5) == "T3" ~ "09-01",
+    substr(dfs_ef[d], 4,5) == "T4" ~ "12-01"
+  )
+  ef <- get(paste0("efectividad", dfs[d]))
+  
+  if (d>=11) {
+    x <- dfs_list[[ dfs[d] ]][c(identificadores, ef)]
+  } else if (d %in% 1:10) {
+    x <- dfs_list[[ dfs[d] ]][c(c("FAC_SEL", "cve", "CD"), ef)] %>%
+      mutate(SEXO=as.numeric(NA), EDAD=as.numeric(NA)) %>%
+      relocate(SEXO, .after = cve) %>%
+      relocate(EDAD, .after = SEXO)
+  }
+  
+  names(x) <- c(identificadores, "municipal", "estatal", "gn", "ejercito", "marina")
+  x <- x %>% mutate(across(everything(), as.numeric)) %>%
+    mutate(
+      fecha=as.Date(paste(substr(dfs_conf[d], 9, nchar(dfs_conf[d])), mes, sep="-"), SEXO=as.numeric(SEXO)),
+    ) 
+  assign(dfs_ef[d], as.data.frame(x)) 
+  
+}
+rm(x)
+rm(efectividad)
+rm(list=variables_ef)
+rm(list=c("efectividadT1_2020", "efectividadT1_2024", "efectividadT2_2024", "efectividadT4_2020",
+          "efectividadT1_2018", "efectividadT2_2018", "efectividadT3_2018", "efectividadT4_2018",
+          "efectividadT1_2019", "efectividadT2_2019", "efectividadT3_2019", "efectividadT4_2019",
+          "efectividadT3_2024"))
+
+
+# Lista con los archivos terminados:
+dfs_ef_list <- list()
+for (d in dfs_ef) {
+  dfs_ef_list[[d]] <- get(d)
+}
+rm(list=dfs_ef)
+
+# Df Agregado:
+ef <- bind_rows(dfs_ef_list) %>%
+  filter(if_any(all_of(c("municipal", "estatal", "gn", "ejercito", "marina")), is.na))
+
+# Reescalar respuestas:
+for (c in c("municipal", "estatal", "gn", "ejercito", "marina")) {
+  ef[[c]] = case_when(
+    ef[[c]] == 1 ~ 1,
+    ef[[c]] == 2 ~ 1,
+    ef[[c]] == 3 ~ 0,
+    ef[[c]] == 4 ~ 0,
+    ef[[c]] == 9 ~ NA
+  )
+}
+
+# Datos en formato tidy:
+ef_long <- pivot_longer(
+  ef,
+  cols=c("municipal", "estatal", "gn", "ejercito", "marina"),
+  names_to="institucion",
+  values_to="eficiencia"
+)
+
+
+### Objetos para Graficar ------------------------------------------------------
+
+#### Indicadores Nacionales por Dependencia ------------------------------------
+
+# Índice de confianza nacional:
+conf_nacional <- conf_long %>%
+  group_by(fecha, institucion) %>%
+  summarise(
+    indice=weighted.mean(confianza, FAC_SEL, na.rm = TRUE)
+  ) %>%
+  mutate(
+    indice=indice*100
+  )
+
+# Índice de eficiencia nacional:
+ef_nacional <- ef_long %>%
+  group_by(fecha, institucion) %>%
+  summarise(
+    indice=weighted.mean(eficiencia, FAC_SEL, na.rm=TRUE)
+  ) %>%
+  mutate(
+    indice=(indice*100)
+  )
+
+# Lista con los índices nacionales:
+agregados <- list(conf_nacional, ef_nacional)
+names(agregados) <- c("conf_nacional", "ef_nacional")
+
+
+#### Indicadores por Nivel de Población ----------------------------------------
+
+# Índice de confianza por tamaño de ciudad:
+conf_pob <- conf_long %>%
+  left_join(pob_cd, by=c("CD"="cd")) %>%
+  mutate(tamaño=case_when(
+    poblacion <= 500000 ~ "Pequeña",
+    poblacion > 500000 & poblacion <= 1000000 ~ "Mediana",
+    poblacion > 1000000 ~ "Grande"
+  )) %>%
+  group_by(institucion, fecha, tamaño) %>%
+  summarise(
+    indice=weighted.mean(confianza, FAC_SEL, na.rm=TRUE)
+  ) %>%
+  mutate(
+    indice=indice*100
+  )
+
+# Índice de eficiencia por tamaño de ciudad:
+ef_pob <- ef_long %>%
+  left_join(pob_cd, by=c("CD"="cd")) %>%
+  mutate(tamaño=case_when(
+    poblacion <= 500000 ~ "Pequeña",
+    poblacion > 500000 & poblacion <= 1000000 ~ "Mediana",
+    poblacion > 1000000 ~ "Grande"
+  )) %>%
+  group_by(institucion, fecha, tamaño) %>%
+  summarise(
+    indice=weighted.mean(eficiencia, FAC_SEL, na.rm=TRUE)
+  ) %>%
+  mutate(
+    indice=indice*100
+  )
+
+# Lista con los indices por tamaño de ciudad:
+tamaño <- list(conf_pob, ef_pob)
+names(tamaño) <- c("conf_pob", "ef_pob")
+
+
+#### Indicadores por Sexo ------------------------------------------------------
+
+# Índice de confianza por sexo:
+conf_sexo <- conf_long %>%
+  mutate(
+    sexo=case_when(
+      SEXO==1 ~ "H",
+      SEXO==2 ~ "M"
+    )
+  ) %>%
+  group_by(fecha, institucion, sexo) %>%
+  summarise(
+    indice=weighted.mean(confianza, FAC_SEL, na.rm = TRUE)*100
+  )
+  
+# Índice de eficiencia por sexo:
+ef_sexo <- ef_long %>%
+  mutate(
+    sexo=case_when(
+      SEXO==1 ~ "H",
+      SEXO==2 ~ "M"
+    )
+  ) %>%
+  group_by(fecha, institucion, sexo) %>%
+  summarise(
+    indice=weighted.mean(eficiencia, FAC_SEL, na.rm = TRUE)*100
+  )
+
+# Lísta con los índices por sexo:
+sexo <- list(conf_sexo, ef_sexo)
+names(sexo) <- c("conf_sexo", "ef_sexo")
+
+
+#### Indicadores para Barras ---------------------------------------------------
+
+conf_barras <- conf_nacional %>%
+  filter(fecha==as.Date("2023-06-01") | fecha==as.Date("2024-06-01")) %>%
+  pivot_wider(names_from = institucion, values_from = indice) %>%
+  t()
+colnames(conf_barras) <- c("Junio 2023", "Junio 2024")
+conf_barras <- as.data.frame(conf_barras[2:6,]) %>%
+  mutate(
+    `Junio 2023`=as.numeric(`Junio 2023`),
+    `Junio 2024`=as.numeric(`Junio 2024`)
+  ) %>%
+  arrange(`Junio 2023`)
+
+ef_barras <- ef_nacional %>%
+  filter(fecha==as.Date("2023-06-01") | fecha==as.Date("2024-06-01")) %>%
+  pivot_wider(names_from = institucion, values_from = indice) %>%
+  t()
+colnames(ef_barras) <- c("Junio 2023", "Junio 2024")
+ef_barras <- as.data.frame(ef_barras[2:6,]) %>%
+  mutate(
+    `Junio 2023`=as.numeric(`Junio 2023`),
+    `Junio 2024`=as.numeric(`Junio 2024`)
+  ) %>%
+  arrange(`Junio 2023`)
+
+
+barras <- list(conf_barras, ef_barras)
+names(barras) <- c("conf_barras", "ef_barras")
+
+#### Guardar Datos -------------------------------------------------------------
+
+final <- list(agregados, tamaño, sexo, barras)
+names(final) <- c("agregados", "tamaño", "sexo", "barras")
+save(final, file="output/final.RData")
+
+rm(list=ls())
+load("output/final.RData")
+list2env(final, envir=.GlobalEnv)
+
+list2env(agregados, envir=.GlobalEnv)
+list2env(tamaño, envir=.GlobalEnv)
+list2env(sexo, envir=.GlobalEnv)
+list2env(barras, envir=.GlobalEnv)
+
+rm(list=c("final", "sexo", "tamaño", "agregados", "barras"))
+
+
+### Gráficas -------------------------------------------------------------------
+
+#### Indicadores Nacionales ----------------------------------------------------
+
+c_gn <- filter(conf_nacional, institucion=="gn" & fecha>=as.Date("2019-03-01"))
+e_gn <- filter(ef_nacional, institucion=="gn" & fecha>=as.Date("2019-03-01"))
+
+# Guardia Nacional:
+graph_tsline(
+  x=c_gn$fecha,
+  y=c_gn$indice,
+  intervalo = "3 months",
+  color="#691C32",
+  ylim=c(65, 80),
+  etiquetas=F,
+  xmain = "",
+  ymain="Calificación a la Guardia Nacional",
+  xdist=5.5,
+  ydist=2.5,
+  sep=0.75,
+  lwd=6,
+  points.cex = 1.2,
+  posc="up",
+  margins=c(6,4,0,0),
+  las=2,
+  date.format = "%b-%Y",
+  cex.xlab =1,
+  cex.ylab=1.2,
+  etiquetas.cex = 1.2,
+  box=F
+)
+axis(1, at=c(as.Date("1900-01-01"), as.Date("2100-01-01")), lwd=3, col="gray25")
+axis(2, at=c(0,100), lwd=3, col="gray25")
+lines(e_gn$fecha, e_gn$indice, lwd=6, col="#BC955C")
+lines(e_gn$fecha, e_gn$indice, lwd=6, col="#BC955C", t="p", cex=1.2, pch=16)
+text(e_gn$fecha[21], e_gn$indice[21]-1.05, labels=paste0(round(e_gn$indice[21],1), "%"), cex=1, col="black", font=2)
+text(c_gn$fecha[21], c_gn$indice[21]+0.75, labels=paste0(round(c_gn$indice[21],1), "%"), cex=1, col="black", font=2)
+text(e_gn$fecha[which.max(e_gn$indice)], e_gn$indice[which.max(e_gn$indice)]+0.75, labels=paste0(round(e_gn$indice[which.max(e_gn$indice)],1), "%"), cex=1, col="black", font=2)
+text(c_gn$fecha[which.max(c_gn$indice)], c_gn$indice[which.max(c_gn$indice)]+0.75, labels=paste0(round(c_gn$indice[which.max(c_gn$indice)],1), "%"), cex=1, col="black", font=2)
+
+dev.print(png, "output/T4-2024/guardia_nacional.png", width = 3423, height = 1964, res = 400)
+dev.off()
+
+# Leyenda:
+par(mar=c(0,0,0,0), family="MontserratRoman-Bold", bg=NA)
+plot(1:2, 1:2, type="n")
+legend("center", legend=c("Confianza", "Efectividad"), col=c("#691C32", "#BC955C"), lty=1, lwd=20, bty="n", cex=4, horiz=F)
+dev.print(png, "output/T4-2024/guardia_nacional_label.png", width = 3423, height = 1964, res = 400)
+dev.off()
+
+
+#### Efectividad por Institución -----------------------------------------------
+
+colores <- c("#952E44", "#5A1F2E", "#B69763", "#315A4F", "#4D4D4D")
+
+e_mun <- filter(ef_nacional, institucion=="municipal")
+e_est <- filter(ef_nacional, institucion=="estatal")
+e_ej <- filter(ef_nacional, institucion=="ejercito")
+e_mar <- filter(ef_nacional, institucion=="marina")
+
+
+par(mar=c(0,0,0,0), mfrow=c(2,2), family="MontserratRoman-Bold", bg=NA)
+
+# Marina
+par(mar=c(2,2,1.2,0.5))
+plot(x=e_mar$fecha, y=e_mar$indice, type="n", axes=F, xlab='', ylab='', main="Marina", ylim=c(84,94))
+lines(e_mar$fecha, e_mar$indice, lwd=5, col="#315A4F")
+lines(e_mar$fecha, e_mar$indice, lwd=5, col="#315A4F", t="p", cex=1.2, pch=16)
+axis(1, 
+     at=seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), 
+     labels=format(seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), "%b-%Y"),
+     las=1,
+     col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25")
+axis(2, at=seq(84,94,5), col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25", labels=paste0(seq(84,94,5), "%"))
+axis(1, at=c(as.Date("1900-01-01"), as.Date("2100-01-01")), lwd=3, col="gray25")
+axis(2, at=c(0,100), lwd=3, col="gray25")
+text(e_mar$fecha[25]-35, e_mar$indice[25]+1, labels = paste0(round(e_mar$indice[25],1), "%"))
+abline(v=as.Date("2018-12-01"), lty=2, lwd=2, col="gray25")
+# Ejercito
+par(mar=c(2,2,1.2,0.5))
+plot(x=e_ej$fecha, y=e_ej$indice, type="n", axes=F, xlab='', ylab='', main="Ejército", ylim=c(78,88))
+lines(e_ej$fecha, e_ej$indice, lwd=5, col="#315A4F")
+lines(e_ej$fecha, e_ej$indice, lwd=5, col="#315A4F", t="p", cex=1.2, pch=16)
+axis(1, 
+     at=seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), 
+     labels=format(seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), "%b-%Y"),
+     las=1,
+     col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25")
+axis(2, at=seq(78,88,5), col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25", labels=paste0(seq(78,88,5), "%"))
+axis(1, at=c(as.Date("1900-01-01"), as.Date("2100-01-01")), lwd=3, col="gray25")
+axis(2, at=c(0,100), lwd=3, col="gray25")
+text(e_ej$fecha[25]-30, e_ej$indice[25]+1, labels = paste0(round(e_ej$indice[25],1), "%"))
+abline(v=as.Date("2018-12-01"), lty=2, lwd=2, col="gray25")
+# Policia Estatal
+par(mar=c(2,2,1.2,0.5))
+plot(x=e_est$fecha, y=e_est$indice, type="n", axes=F, xlab='', ylab='', main="Policía Estatal", ylim=c(43,58))
+lines(e_est$fecha, e_est$indice, lwd=5, col="#315A4F")
+lines(e_est$fecha, e_est$indice, lwd=5, col="#315A4F", t="p", cex=1.2, pch=16)
+axis(1, 
+     at=seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), 
+     labels=format(seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), "%b-%Y"),
+     las=1,
+     col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25")
+axis(2, at=seq(43,58,5), col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25", labels=paste0(seq(43,58,5), "%"))
+axis(1, at=c(as.Date("1900-01-01"), as.Date("2100-01-01")), lwd=3, col="gray25")
+axis(2, at=c(0,100), lwd=3, col="gray25")
+text(e_est$fecha[25]-60, e_est$indice[25]-1, labels = paste0(round(e_est$indice[25],1), "%"))
+abline(v=as.Date("2018-12-01"), lty=2, lwd=2, col="gray25")
+# Policia Municipal
+  par(mar=c(2,2,1.2,0.5))
+  plot(x=e_mun$fecha, y=e_mun$indice, type="n", axes=F, xlab='', ylab='', main="Policía Municipal", ylim=c(38,53))
+  lines(e_mun$fecha, e_mun$indice, lwd=5, col="#315A4F")
+  lines(e_mun$fecha, e_mun$indice, lwd=5, col="#315A4F", t="p", cex=1.2, pch=16)
+  axis(1, 
+       at=seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), 
+       labels=format(seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), "%b-%Y"),
+       las=1,
+       col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25")
+  axis(2, at=seq(38,53,5), col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25", labels=paste0(seq(38,53,5), "%"))
+  axis(1, at=c(as.Date("1900-01-01"), as.Date("2100-01-01")), lwd=3, col="gray25")
+  axis(2, at=c(0,100), lwd=3, col="gray25")
+  text(e_mun$fecha[25]-60, e_mun$indice[25]-1, labels = paste0(round(e_mun$indice[25],1), "%"))
+  abline(v=as.Date("2018-12-01"), lty=2, lwd=2, col="gray25")
+
+
+dev.print(png, "output/T4-2024/efectividad_autoridades.png", width = 3423, height = 1964, res = 400)
+  
+
+#### Confianza por Institución -----------------------------------------------
+
+c_mun <- filter(conf_nacional, institucion=="municipal")
+c_est <- filter(conf_nacional, institucion=="estatal")
+c_ej <- filter(conf_nacional, institucion=="ejercito")
+c_mar <- filter(conf_nacional, institucion=="marina")
+
+
+par(mar=c(0,0,0,0), mfrow=c(2,2), family="MontserratRoman-Bold", bg=NA)
+
+# Marina
+par(mar=c(2,2,1.2,0.5))
+plot(x=c_mar$fecha, y=c_mar$indice, type="n", axes=F, xlab='', ylab='', main="Marina", ylim=c(84,94))
+lines(c_mar$fecha, c_mar$indice, lwd=5, col="#315A4F")
+lines(c_mar$fecha, c_mar$indice, lwd=5, col="#315A4F", t="p", cex=1.2, pch=16)
+axis(1, 
+     at=seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), 
+     labels=format(seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), "%b-%Y"),
+     las=1,
+     col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25")
+axis(2, at=seq(84,94,5), col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25", labels=paste0(seq(84,94,5), "%"))
+axis(1, at=c(as.Date("1900-01-01"), as.Date("2100-01-01")), lwd=3, col="gray25")
+axis(2, at=c(0,100), lwd=3, col="gray25")
+text(c_mar$fecha[25]-40, c_mar$indice[25]+1, labels = paste0(round(c_mar$indice[25],1), "%"))
+abline(v=as.Date("2018-12-01"), lty=2, lwd=2, col="gray25")
+# Ejercito
+par(mar=c(2,2,1.2,0.5))
+plot(x=c_ej$fecha, y=c_ej$indice, type="n", axes=F, xlab='', ylab='', main="Ejército", ylim=c(78,88))
+lines(c_ej$fecha, c_ej$indice, lwd=5, col="#315A4F")
+lines(c_ej$fecha, c_ej$indice, lwd=5, col="#315A4F", t="p", cex=1.2, pch=16)
+axis(1, 
+     at=seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), 
+     labels=format(seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), "%b-%Y"),
+     las=1,
+     col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25")
+axis(2, at=seq(78,88,5), col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25", labels=paste0(seq(78,88,5), "%"))
+axis(1, at=c(as.Date("1900-01-01"), as.Date("2100-01-01")), lwd=3, col="gray25")
+axis(2, at=c(0,100), lwd=3, col="gray25")
+text(c_ej$fecha[25]-35, c_ej$indice[25]+1, labels = paste0(round(c_ej$indice[25],1), "%"))
+abline(v=as.Date("2018-12-01"), lty=2, lwd=2, col="gray25")
+# Policia Estatal
+par(mar=c(2,2,1.2,0.5))
+plot(x=c_est$fecha, y=c_est$indice, type="n", axes=F, xlab='', ylab='', main="Policía Estatal", ylim=c(43,58))
+lines(c_est$fecha, c_est$indice, lwd=5, col="#315A4F")
+lines(c_est$fecha, c_est$indice, lwd=5, col="#315A4F", t="p", cex=1.2, pch=16)
+axis(1, 
+     at=seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), 
+     labels=format(seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), "%b-%Y"),
+     las=1,
+     col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25")
+axis(2, at=seq(43,58,5), col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25", labels=paste0(seq(43,58,5), "%"))
+axis(1, at=c(as.Date("1900-01-01"), as.Date("2100-01-01")), lwd=3, col="gray25")
+axis(2, at=c(0,100), lwd=3, col="gray25")
+text(c_est$fecha[25]-50, c_est$indice[25]-1, labels = paste0(round(c_est$indice[25],1), "%"))
+abline(v=as.Date("2018-12-01"), lty=2, lwd=2, col="gray25")
+# Policia Municipal
+par(mar=c(2,2,1.2,0.5))
+plot(x=c_mun$fecha, y=c_mun$indice, type="n", axes=F, xlab='', ylab='', main="Policía Municipal", ylim=c(38,53))
+lines(c_mun$fecha, c_mun$indice, lwd=5, col="#315A4F")
+lines(c_mun$fecha, c_mun$indice, lwd=5, col="#315A4F", t="p", cex=1.2, pch=16)
+axis(1, 
+     at=seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), 
+     labels=format(seq.Date(as.Date("2018-09-01"), as.Date("2024-12-01"), by="year"), "%b-%Y"),
+     las=1,
+     col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25")
+axis(2, at=seq(38,53,5), col="gray25", tck=0.02, cex.axis=0.9, col.axis="gray25", labels=paste0(seq(38,53,5), "%"))
+axis(1, at=c(as.Date("1900-01-01"), as.Date("2100-01-01")), lwd=3, col="gray25")
+axis(2, at=c(0,100), lwd=3, col="gray25")
+text(c_mun$fecha[25]-50, c_mun$indice[25]-1, labels = paste0(round(c_mun$indice[25],1), "%"))
+abline(v=as.Date("2018-12-01"), lty=2, lwd=2, col="gray25")
+
+dev.print(png, "output/T4-2024/confianza_autoridades.png", width = 3423, height = 1964, res = 400)
+
+
+#### Tamaño de Ciudad ----------------------------------------------------------
+
+# Confianza
+c_t <- filter(conf_pob, institucion=="gn" & !is.na(tamaño) & fecha > as.Date("2018-03-01"))[,2:4]
+
+grande_c <- filter(c_t, tamaño=="Grande")
+mediano_c <- filter(c_t, tamaño=="Mediana") 
+pequeño_c <-filter(c_t, tamaño=="Pequeña")
+
+graph_tsline(
+  x=seq(as.Date("2018-06-01"), as.Date("2024-12-01"), by="3 month"),
+  y=as.numeric(rep(NA, 27)),
+  intervalo = "3 months",
+  color="#691C32",
+  ylim=c(60, 85),
+  etiquetas=F,
+  xmain = "",
+  ymain="Confianza en la Guardia Nacional",
+  xdist=5.5,
+  ydist=2.5,
+  sep=0.75,
+  lwd=6,
+  points.cex = 1.2,
+  posc="down",
+  margins=c(5.5,4,0.5,2),
+  las=2,
+  date.format = "%b-%Y",
+  cex.xlab =1,
+  cex.ylab=1.2,
+  etiquetas.cex = 1,
+  box=F,
+  lwd.axis = 3
+)
+
+
+lines(mediano_c$fecha, grande_c$indice, lwd=6, col="#691C32")
+lines(mediano_c$fecha, grande_c$indice, pch=16, cex=1.2, t="p", col="#691C32")
+
+lines(mediano_c$fecha, mediano_c$indice, lwd=6, col="#0e2520")
+lines(mediano_c$fecha, mediano_c$indice, pch=16, cex=1.2, t="p", col="#0e2520")
+
+lines(pequeño_c$fecha, pequeño_c$indice, lwd=6, col="#BC955C")
+lines(pequeño_c$fecha, pequeño_c$indice, pch=16, cex=1.2, t="p", col="#BC955C")
+
+axis(2, at=c(59,100), lwd=3, col="gray25", tck=0, labels=NA)
+axis(1, at=c(as.Date("2018-01-01"),as.Date("2100-01-01")), lwd=3, col="gray25", tck=0, labels=NA)
+
+text(as.Date("2024-12-01"), grande_c$indice[23]+0.5, labels=paste0(round(grande_c$indice[23], 1),"%"), cex=1, srt=45)
+text(as.Date("2024-12-01"), mediano_c$indice[23]+1.5, labels=paste0(round(mediano_c$indice[23], 1), "%"), cex=1, srt=45)
+text(as.Date("2024-12-01"), pequeño_c$indice[23]+1.5, labels=paste0(round(pequeño_c$indice[23],1), "%"), cex=1, srt=45)
+
+
+par(mar=c(0,0,0,0))
+plot(1:2,1:2, type="n")
+legend("center", legend=c(
+  "Grande: Más de 1'000,000",
+  "Mediana: Entre 500.000 y 1'000,000",
+  "Pequeña: Menos de 500.000"
+), bty="n", title = "Clasificación por No. de Habitantes", 
+col=c("#691C32", "#10312B", "#BC955C"), lwd=10, cex=2)
+
+par(mar=c(0,0,0,0))
+plot(1:2,1:2, type="n")
+legend("center", col=c("#691C32", "#10312B", "#BC955C"), 
+       legend=c("Grande", "Mediana", "Pequeña"), bty="n",
+       cex=4, lwd=20
+)
+
+# Efectividad
+e_t <- filter(ef_pob, institucion=="gn" & !is.na(tamaño) & fecha > as.Date("2018-03-01"))[,2:4] 
+
+grande_e <- filter(e_t, tamaño=="Grande")
+mediano_e <- filter(e_t, tamaño=="Mediana") 
+pequeño_e <-filter(e_t, tamaño=="Pequeña")
+
+graph_tsline(
+  x=seq(as.Date("2018-06-01"), as.Date("2024-12-01"), by="3 month"),
+  y=as.numeric(rep(NA, 27)),
+  intervalo = "3 months",
+  color="#691C32",
+  ylim=c(55, 77),
+  etiquetas=F,
+  xmain = "",
+  ymain="Efectividad de la Guardia Nacional",
+  xdist=5.5,
+  ydist=2.5,
+  sep=0.75,
+  lwd=5,
+  points.cex = 1.2,
+  posc="down",
+  margins=c(5.5,4,0.5,0.5),
+  las=2,
+  date.format = "%b-%Y",
+  cex.xlab =1,
+  cex.ylab=1.2,
+  etiquetas.cex = 1,
+  box=F
+)
+
+lines(mediano_e$fecha, grande_e$indice, lwd=5, col="#691C32")
+lines(mediano_e$fecha, grande_e$indice, pch=16, cex=1.2, t="p", col="#691C32")
+
+lines(mediano_e$fecha, mediano_e$indice, lwd=5, col="#10312B")
+lines(mediano_e$fecha, mediano_e$indice, pch=16, cex=1.2, t="p", col="#10312B")
+
+lines(pequeño_e$fecha, pequeño_e$indice, lwd=5, col="#BC955C")
+lines(pequeño_e$fecha, pequeño_e$indice, pch=16, cex=1.2, t="p", col="#BC955C")
+
+axis(2, at=c(50,100), lwd=3, col="gray25", tck=0, labels=NA)
+axis(1, at=c(as.Date("2018-01-01"),as.Date("2100-01-01")), lwd=3, col="gray25", tck=0, labels=NA)
+
+text(as.Date("2024-12-01"), grande_e$indice[23]+1, labels=paste0(round(grande_e$indice[23], 1),"%"), cex=1)
+text(as.Date("2024-12-01")+15, mediano_e$indice[23]-0.3, labels=paste0(round(mediano_e$indice[23], 1), "%"), cex=1)
+text(as.Date("2024-12-01"), pequeño_e$indice[23]-0.5, labels=paste0(round(pequeño_e$indice[23],1), "%"), cex=1)
+
+
+#### Sexo ----------------------------------------------------------------------
+
+colores <- c("#952E44", "#5A1F2E", "#B69763", "#315A4F", "#4D4D4D")
+
+# Confianza 
+
+c_s <- filter(conf_sexo, fecha>=as.Date("2021-06-01") & institucion=="gn")
+
+h_c <- filter(c_s,sexo=="H")
+m_c <- filter(c_s,sexo=="M")
+
+graph_tsline(
+  x=h_c$fecha,
+  y=h_c$indice,
+  intervalo = "3 months",
+  color="#5A1F2E",
+  ylim=c(68, 80),
+  etiquetas=F,
+  xmain = "",
+  ymain="Confianza en la Guardia Nacional",
+  xdist=5.5,
+  ydist=2.5,
+  sep=0.75,
+  lwd=6,
+  points.cex = 1.2,
+  posc="up",
+  margins=c(5.5,4,0,0),
+  las=2,
+  date.format = "%b-%Y",
+  cex.xlab =1,
+  cex.ylab=1.2,
+  etiquetas.cex = 1,
+  box=F
+)
+
+lines(c_gn$fecha[7:20], c_gn$indice[7:20], col=rgb(77/255,77/255,77/255, alpha=0.5), lwd=3, lty=2)
+
+lines(m_c$fecha, m_c$indice, lwd=6, col="#315A4F")
+lines(m_c$fecha, m_c$indice, pch=16, cex=1.2, t="p", col="#315A4F")
+
+lines(h_c$fecha, h_c$indice, lwd=6, col="#5A1F2E")
+lines(h_c$fecha, h_c$indice, pch=16, cex=1.2, t="p", col="#5A1F2E")
+
+rgb(77/255,77/255,77/255, alpha=0.5)
+
+axis(2, at=c(0,100), lwd=3, col="gray25")
+axis(1, at=c(as.Date("1900-01-01"),as.Date("2100-01-01")), lwd=3, col="gray25")
+
+text(h_c$fecha[14], h_c$indice[14]-0.75, labels=paste0(round(h_c$indice[14],1), "%"), cex=1, col="black", font=2)
+text(m_c$fecha[14], m_c$indice[14]+0.75, labels=paste0(round(m_c$indice[14],1), "%"), cex=1, col="black", font=2)
+
+par(mar=c(0,0,0,0))
+plot(1:2,1:2,type="n")
+legend("center", col=c("#315A4F", "#5A1F2E", rgb(77/255,77/255,77/255, alpha=0.5)), 
+       legend=c("Mujeres", "Hombres", "Prom. Nacional"), bty="n",
+       cex=4, lwd=c(20,20,12), lty=c(1,1,2)
+)
+
+# Eficiencia 
+
+e_s <- filter(ef_sexo, fecha>=as.Date("2021-06-01") & institucion=="gn")
+
+h_e <- filter(e_s,sexo=="H")
+m_e <- filter(e_s,sexo=="M")
+
+graph_tsline(
+  x=h_e$fecha,
+  y=h_e$indice,
+  intervalo = "3 months",
+  color="#5A1F2E",
+  ylim=c(66, 76),
+  etiquetas=F,
+  xmain = "",
+  ymain="Efectividad de la Guardia Nacional",
+  xdist=5.5,
+  ydist=2.5,
+  sep=0.75,
+  lwd=6,
+  points.cex = 1.2,
+  posc="up",
+  margins=c(5.5,4,0,0),
+  las=2,
+  date.format = "%b-%Y",
+  cex.xlab =1,
+  cex.ylab=1.2,
+  etiquetas.cex = 1,
+  box=F
+)
+
+lines(e_gn$fecha[7:20], e_gn$indice[7:20], col=rgb(77/255,77/255,77/255, alpha=0.5), lwd=3, lty=2)
+
+lines(m_e$fecha, m_e$indice, lwd=6, col="#315A4F")
+lines(m_e$fecha, m_e$indice, pch=16, cex=1.2, t="p", col="#315A4F")
+
+lines(h_e$fecha, h_e$indice, lwd=6, col="#691C32")
+lines(h_e$fecha, h_e$indice, pch=16, cex=1.2, t="p", col="#691C32")
+
+axis(2, at=c(0,100), lwd=3, col="gray25")
+axis(1, at=c(as.Date("1900-01-01"),as.Date("2100-01-01")), lwd=3, col="gray25")
+
+#legend("topleft", col=c("#691C32", "#315A4F", rgb(77/255,77/255,77/255, alpha=0.5)), 
+#       legend=c("Mujeres", "Hombres", "Promedio Nacional"), bty="n",
+#       cex=1.2, lwd=c(5,5,3), lty=c(1,1,2) 
+#)
+
+text(h_e$fecha[14], h_e$indice[14]-0.75, labels=paste0(round(h_e$indice[14],1), "%"), cex=1, col="black", font=2)
+text(m_e$fecha[14], m_e$indice[14]+0.75, labels=paste0(round(m_e$indice[14],1), "%"), cex=1, col="black", font=2)
+
+#### Percepción ----------------------------------------------------------------
+
+percepcion <- read_xlsx("input/percepción.xlsx") %>%
+  mutate(indice=1:46) %>%
+  arrange(desc(indice)) %>%
+  mutate(
+    fecha=seq(as.Date("2013-09-01"), as.Date("2024-12-01"), by="3 month"),
+    Nacional=as.numeric(Nacional),
+    Hombres=as.numeric(Hombres),
+    Mujeres=as.numeric(Mujeres)
+  )
+
+# General:
+
+# svglite("general.svg", width=16, height=9)
+graph_tsline(
+  x=percepcion$fecha,
+  y=percepcion$Nacional,
+  intervalo = "year",
+  color= c("#315A4F", "#315A4F"),
+  ylim=c(55, 80),
+  y.lab =, paste0(seq(55,80,5), "%"),
+  x.lab=rep(NA, 12),
+  y.ticks=seq(55,80,5),
+  xmain = "",
+  ymain="Percepción de Inseguridad (%)",
+  xdist=5.5,
+  ydist=3.3,
+  sep=2,
+  lwd=7,
+  las=2,
+  points.cex = 1.5,
+  margins=c(5,4.5,0,0),
+  date.format = "%b-%Y",
+  cex.xlab=1,
+  cex.ylab=1,
+  etiquetas=F,
+  # box=F,
+  evento=TRUE,
+  fechas.ev = as.Date("2018-12-01"),
+  export=FALSE,
+  family="MontserratRoman-Bold"
+)
+
+lines(percepcion$fecha[c(27,29)], percepcion$Nacional[c(27,29)], lwd=3, col="#315A4F", lty=2)
+
+axis(2, at=c(0,110), lwd=3, col="gray25", tck=0, labels = NA)
+axis(1, at=seq(as.Date("2012-09-01"), as.Date("2025-09-01"), by="year"), 
+     labels=format(seq(as.Date("2012-09-01"), as.Date("2025-09-01"), by="year"), "%b-%Y"), 
+     lwd=3, col="gray25", las=2, cex.axis=1, tck=0, col.axis="gray25", cex=0.8)
+
+text(percepcion$fecha[which.max(percepcion$Nacional)], percepcion$Nacional[which.max(percepcion$Nacional)]+1.5, labels=paste0(round(percepcion$Nacional[which.max(percepcion$Nacional)],1), "%"))
+text(percepcion$fecha[which.min(percepcion$Nacional)], percepcion$Nacional[which.min(percepcion$Nacional)]-1.5, labels=paste0(round(percepcion$Nacional[which.min(percepcion$Nacional)],1), "%"))
+dev.print(png, "output/T4-2024/percepcion_general.png", width = 3424, height = 1964, res = 400)
+dev.off()
+
+# Por sexo:
+
+# svglite("sexo.svg", width=16, height=9)
+graph_tsline(
+  x=percepcion$fecha,
+  y=as.numeric(rep(NA, 46)),
+  intervalo = "year",
+  color= c("#315A4F", "#315A4F"),
+  ylim=c(50, 85),
+  y.lab = paste0(seq(50, 85, 5), "%"),
+  x.lab=rep(NA, 12),
+  y.ticks=seq(50, 85, 5),
+  xmain = "",
+  ymain="Percepción de Inseguridad (%)",
+  xdist=5.5,
+  ydist=3.3,
+  sep=2,
+  lwd=4,
+  las=2,
+  points.cex = 1,
+  margins=c(5.5,4.5,0,0),
+  date.format = "%b-%Y",
+  cex.xlab=1,
+  cex.ylab=1,
+  etiquetas=F,
+  # box=F,
+  evento=TRUE,
+  fechas.ev = as.Date("2018-12-01"),
+  family="MontserratRoman-Bold"
+)
+
+lines(percepcion$fecha, percepcion$Mujeres, lwd=8, col="#952E44")
+lines(percepcion$fecha, percepcion$Mujeres, pch=16, cex=1.5, t="p", col="#952E44")
+lines(percepcion$fecha[c(27,29)], percepcion$Mujeres[c(27,29)], lwd=4, lty=2, col="#952E44")
+
+lines(percepcion$fecha, percepcion$Hombres, lwd=8, col="#B69763")
+lines(percepcion$fecha, percepcion$Hombres, pch=16, cex=1.5, t="p", col="#B69763")
+lines(percepcion$fecha[c(27,29)], percepcion$Hombres[c(27,29)], lwd=4, lty=2, col="#B69763")
+
+text(percepcion$fecha[which.min(percepcion$Hombres)], percepcion$Hombres[which.min(percepcion$Hombres)]-1.5, labels=paste0(round(percepcion$Hombres[which.min(percepcion$Hombres)],1), "%"))
+text(percepcion$fecha[which.min(percepcion$Mujeres)], percepcion$Mujeres[which.min(percepcion$Mujeres)]-1.5, labels=paste0(round(percepcion$Mujeres[which.min(percepcion$Mujeres)],1), "%"))
+
+text(percepcion$fecha[which.max(percepcion$Hombres)], percepcion$Hombres[which.max(percepcion$Hombres)]+1.5, labels=paste0(round(percepcion$Hombres[which.max(percepcion$Hombres)],1), "%"))
+text(percepcion$fecha[which.max(percepcion$Mujeres)], percepcion$Mujeres[which.max(percepcion$Mujeres)]+1.5, labels=paste0(round(percepcion$Mujeres[which.max(percepcion$Mujeres)],1), "%"))
+
+
+axis(2, at=c(0,110), lwd=3, col="gray25", tck=0, labels = NA)
+axis(1, at=seq(as.Date("2012-09-01"), as.Date("2025-09-01"), by="year"), 
+     labels=format(seq(as.Date("2012-09-01"), as.Date("2025-09-01"), by="year"), "%b-%Y"), 
+     lwd=3, col="gray25", las=2, cex.axis=1, tck=0, col.axis="gray25", cex=0.8)
+
+dev.print(png, "output/T4-2024/percepcion_sexo.png", width = 3423, height = 1964, res = 400)
+dev.off()
+
+par(mar=c(0,0,0,0), bg=NA, family="MontserratRoman-Bold")
+plot(1:10, 1:10, type="n")
+legend(
+  "center",
+  col=c("#B69763", "#952E44"),
+  legend=c("Hombres", "Mujeres"),
+  bty="n", 
+  lwd=20,
+  cex=4
+)
+dev.print(png, "output/T4-2024/percepcion_sexo_lab.png", width = 3423, height = 1964, res = 400)
+            </code></pre>
+
+            <h4 style="margin-top: 40px;"><b>Project:</b> <i>Proyecciones de Recaudación en Aduanas</i></h4>
+            <pre><code class="language-r">
+# ______________________________________________________________________________
+#
+# Proyecto:       Recaudación en Aduanas
+#                 
+# Script:         proyecciones.R
+# Objetivo:       Generar predicciones respecto a la recaudación potencial 
+#                 de las Aduanas.
+#
+# Autor:          Daniel Kelly
+# Email:          djsanchez@colmex.mx
+# 
+# Fecha:          12-Novimebre-2024
+#
+# ______________________________________________________________________________
+
+# PREAMBULO --------------------------------------------------------------------
+
+#.rs.restartR()
+setwd("/Users/danielkelly/Library/Mobile Documents/com~apple~CloudDocs/ATDyT/Entrega 9 - Recaudación en Aduanas")
+#create_project_folders()
+
+rm( list=ls() )
+
+# librerias
+pacman::p_load(tidyverse, readxl, ggmx, moments, fixest, stargazer, lmtest, coefplot, showtext, janitor, scraEP)
+
+# idioma
+Sys.setlocale("LC_ALL", "es_ES.UTF-8")
+Sys.setenv(LANG = "es_MX.UTF-8")
+
+# utilidades
+font_add_google("Montserrat")
+showtext_auto() 
+options(scipen = 999)
+
+source("/Users/danielkelly/Documents/Estadística/R/Utilities/period.R")
+
+# CÓDIGO -----------------------------------------------------------------------
+
+## Data ------------------------------------------------------------------------
+
+# Indice del Tipo de Cambio Real
+tdc_real <- read_excel("input/indice_real.xlsx") %>% 
+  mutate(fecha = seq(as.Date("2018-01-01"), as.Date("2024-08-01"), by = "month"))
+names(tdc_real) <- c("tdc", "fecha")
+
+# Indice Nacional de Precios al Consumidor
+inpc <- read_excel("input/inpc.xlsx")[1:80,] %>% 
+  mutate(fecha = seq(as.Date("2018-01-01"), as.Date("2024-08-01"), by = "month"))
+
+# Tipo de Cambio Nominal USD-MXN
+tdc_dolar <- read_excel("input/tdc_dolar.xlsx")[13:92,] %>% 
+  mutate(fecha = seq(as.Date("2018-01-01"), as.Date("2024-08-01"), by = "month"))
+
+# Total de Recaudación por Aduana
+recaudacion <- read_excel("input/recaudacion.xlsx", sheet="Recaudación", skip=3) %>% 
+  pivot_longer(cols=c("IVA", "IGI", "DTA", "IEPS", "ISAN", "OTROS", "TOTAL"),
+               names_to="impuesto",
+               values_to="valor") %>% 
+  mutate(
+    fecha=as.Date(paste(Año, Mes, "01", sep="-"))
+  ) %>% 
+  select(-c(Año, Mes))
+names(recaudacion) <- c("id_aduana", "aduana", "tipo_aduana", "impuesto", "valor", "fecha")
+
+# No. de Operaciones por Aduana
+operaciones <- read_excel("input/op_ped.xlsx", skip=2) %>% clean_names() %>% 
+  mutate(
+    fecha=as.Date(paste(ano, mes, "01", sep="-"))
+  ) %>% 
+  select(-c(ano, mes))
+names(operaciones) <- c("id_aduana","aduana","tipo_aduana","op_imp", "op_exp", "ped_imp", "ped_exp", "fecha")
+
+# Índice Global de Actividad Económica
+igae <- read_excel("input/igae.xlsx") %>% clean_names() %>% 
+  mutate(
+    fecha=seq(as.Date("2018-01-01"), as.Date("2024-08-01"), by="month")
+  )
+
+# Volumen de Importaciones y Exportaciones
+imp_exp <- read_excel("input/imp_exp.xlsx") %>% 
+  mutate(
+     total=(log(total) - log( lag(total, order_by = fecha, 1)))
+  )
+
+# Volumen Total
+volumen <- read_excel("input/volumen.xlsx")
+volumen <- volumen %>% 
+  pivot_longer(cols=colnames(volumen)[2:51],
+               names_to="aduana",
+               values_to="volumen") %>% 
+  mutate(
+    fecha=as.Date(as.character(Fecha))
+  ) %>% 
+  select(-Fecha)
+
+# Identificadores de Fecha
+id_fecha <- data.frame(
+  fecha=seq(as.Date("2018-01-01"), as.Date("2024-09-01"), by="month"),
+  id=1:81
+)
+
+## Script ----------------------------------------------------------------------
+
+### Transformación de Datos ----------------------------------------------------
+
+# D.F. con todos los datos:
+df <- recaudacion %>% 
+  left_join(
+    igae, by="fecha"
+  ) %>% 
+  left_join(
+    inpc, by="fecha"
+  ) %>% 
+  left_join(
+    operaciones, by=c("fecha", "aduana", "id_aduana", "tipo_aduana")
+  ) %>% 
+  left_join(
+    tdc_dolar, by="fecha"
+  ) %>% 
+  left_join(
+    tdc_real, by="fecha"
+  ) %>% 
+  left_join(
+    imp_exp, by="fecha"
+  ) %>% 
+  left_join(
+    id_fecha, by="fecha"
+  ) %>% 
+  mutate(
+    anam=ifelse(fecha>="2022-01-01",1,0),
+    aduana=scraEP::unaccent(aduana)
+  )
+
+names(df)[14] <- "tdc_real" 
+
+# Deflactar Recaudación (base 2018):
+indice <- inpc$inpc[which(inpc$fecha=="2018-01-01")]
+
+df <- df %>% 
+  mutate(
+    valor = valor/inpc * indice
+  )
+
+# Unir Volumen Total
+df <- df %>% 
+  left_join(
+    volumen, by=c("fecha", "aduana")
+  )
+
+# Transformaciones en Log-Diff:
+variables <- c("valor", "igae", "inpc", "tdc_dolar", "tdc_real")
+
+df_final <- df %>% 
+  group_by(aduana, impuesto) %>% 
+  mutate(
+    across(all_of(variables), ~ log(.) - log( lag(., order_by = fecha, 1) ) )
+  ) %>% 
+  ungroup() %>% 
+  filter(
+    fecha <= "2024-08-01" & fecha > "2018-01-01"
+  ) %>% 
+  mutate(
+    mes=month(fecha)
+  )
+
+# Guardar D.F. con toda la información
+save(df_final, file="input/df_final.RData")
+
+# Extraer Impuestos
+impuestos <- unique(df_final$impuesto)
+list_impuestos <- list()
+
+for (i in seq_along(impuestos)) {
+  list_impuestos[[impuestos[i]]] <- filter(df_final, impuesto==impuestos[i]) 
+}
+
+# Guardar TOTAL:
+total <- list_impuestos[["TOTAL"]]
+save(total, file="input/total.RData")
+
+
+
+### Modelo con Efectos Fijos ---------------------------------------------------
+modelo1 <- feols(data = total, cluster="aduana", fml = valor ~ volumen + op_imp + op_exp + ped_imp + ped_exp  | id_aduana + fecha)
+summary(modelo1)
+
+# Tabla
+stargazer(coeftest(modelo1))
+
+fixed_effects <- data.frame( 
+  fe=fixef(modelo1)$fecha,
+  fecha=as.Date(names(fixef(modelo1)$fecha)),
+  anam=ifelse(as.Date(names(fixef(modelo1)$fecha))>="2022-01-01", 1, 0)
+) %>% 
+  left_join(
+    id_fecha, by="fecha"
+  )
+
+# Vector de Colores
+colores <- c("#C6AE82", "#989572", "#6A8E7F", "#D0CFEC", "#27476E")
+
+#### Gráfica de Efectos Fijos de Periodo ----
+par(family="Montserrat", mar=c(2,2,1,1), bg=NA)
+
+plot(fixed_effects$fecha, fixed_effects$fe, t="l", lwd=6,
+     ylab = "Coeficiente Estimado", xlab = "Fecha", 
+     main = NULL,
+     ylim=c(-1,1))
+
+abline(h=0, col="gray25", lty=3, lwd=4)
+abline(v=as.Date("2022-01-01"), col="firebrick", lty=3, lwd=4)
+
+dev.print(png, "output/v2/efectos_tiempo.png", width = 3024, height = 1964, res = 400)
+dev.off()
+
+
+#### Gráfica de Efectos Fijos de Periodo ----
+par(family="Montserrat", mar=c(2,2,1,1), bg=NA)
+
+plot(fixed_effects$fecha, fixed_effects$fe, t="l", lwd=6,
+     ylab = "Coeficiente Estimado", xlab = "Fecha", 
+     main = NULL,
+     ylim=c(-1,1))
+
+abline(h=0, col="gray25", lty=3, lwd=4)
+abline(v=as.Date("2022-01-01"), col="firebrick", lty=3, lwd=4)
+
+period("2018-12-01", "2019-05-01", colores[1], colores[1], 0.1)
+period("2019-05-02", "2020-04-01", colores[2], colores[2], 0.1)
+period("2020-04-02", "2022-10-01", colores[3], colores[3], 0.1)
+period("2022-12-01", "2023-07-21", colores[4], colores[4], 0.1)
+period("2023-07-22", max(fixed_effects$fecha), colores[5], colores[5], 0.1)
+
+dev.print(png, "output/v2/efectos_tiempo_periodo.png", width = 3024, height = 1964, res = 400)
+dev.off()
+
+# Regresión con los Efectos Fijos
+df_modelo1.1 <- left_join(total, fixed_effects)
+
+modelo1.1 <- lm(fe ~ anam + igae + total + id + tdc_real, data=df_modelo1.1)
+summary(modelo1.1)
+
+stargazer(coeftest(modelo1.1))
+
+### Rolling OLS ----------------------------------------------------------------
+
+# Función para Definir Ventana
+window <- function(fecha) {
+  inicio <- max(fecha-180, as.Date("2018-01-01"))
+  fecha_inicio <- as.Date(paste(year(inicio), month(inicio), "01", sep="-"))
+  
+  final <- min(fecha+180, as.Date("2024-08-01"))
+  fecha_final <- as.Date(paste(year(final), month(final), "01", sep="-"))
+  
+  secuencia <- seq(as.Date(fecha_inicio), as.Date(fecha_final), by="month")
+  return(secuencia)
+}
+
+# Secuencia de Fechas:
+fechas <- seq(as.Date("2018-01-01"), as.Date("2024-08-01"), by="month")
+
+
+#### Automatización de las Regresiones -----------------------------------------
+
+roll_graph <- function (variable, impuesto) {
+  
+  fechas <- seq(as.Date("2018-01-01"), as.Date("2024-07-01"), by="month")
+  
+  list_opimp <- list()
+  
+  df_name <- tolower(impuesto)
+  
+  for (f in fechas) {
+    
+    ventana <- window(as.Date(f))
+    df_modelo <- mutate(get(df_name), fecha=as.Date(fecha)) %>%  filter(fecha %in% ventana)
+    
+    modelo <- feols(
+      data=df_modelo,
+      cluster="aduana",
+      fml=valor ~ igae + op_imp + op_exp + tdc_real + ped_imp + ped_exp + total + volumen + id | id_aduana,
+    )
+    
+    coeficiente <- modelo$coefficients[[variable]]
+    up_ci <- modelo$coefficients[[variable]] + 1.645 * modelo$se[[variable]]
+    low_ci <- modelo$coefficients[[variable]] - 1.645 * modelo$se[[variable]]
+    
+    #print(f)
+    #print(summary(modelo))
+    
+    nombre <- paste0("df_", f)
+    
+    df_resultados <- data.frame(
+      coef = coeficiente,
+      up = up_ci,
+      low = low_ci,
+      fecha = f
+    )
+    
+    list_opimp[[nombre]] <- df_resultados
+    
+  }
+  
+  op_imp <- bind_rows(list_opimp) %>% 
+    mutate(fecha = as.Date(fecha))
+  
+  # return(op_imp)
+  
+  par(family="Montserrat", mar=c(2,2,1,1))
+  plot(op_imp$fecha, op_imp$coef, ylim=c(min(op_imp$low), max(op_imp$up)), t="l", lwd=4,
+       ylab = "Coeficiente Estimado", xlab = "Fecha", main = paste(variable, "en", impuesto))
+  lines(op_imp$fecha, op_imp$up, lwd=2, lty=2, col="firebrick")
+  lines(op_imp$fecha, op_imp$low, lwd=2, lty=2, col="firebrick")
+  abline(h=0, col="gray25", lty=3, lwd=2)
+  
+  #period("2018-12-01", "2019-05-01", colores[1], colores[1], 0.1)
+  #period("2019-05-02", "2020-04-01", colores[2], colores[2], 0.1)
+  #period("2020-04-02", "2022-10-01", colores[3], colores[3], 0.1)
+  #period("2022-12-01", "2023-07-21", colores[4], colores[4], 0.1)
+  #period("2023-07-22", max(op_imp$fecha), colores[5], colores[5], 0.1)
+  
+}
+
+
+roll_coefs <- relacion <- function (variable, impuesto) {
+  
+  fechas <- seq(as.Date("2018-01-01"), as.Date("2024-07-01"), by="month")
+  
+  list_opimp <- list()
+  
+  df_name <- tolower(impuesto)
+  
+  for (f in fechas) {
+    
+    ventana <- window(as.Date(f))
+    df_modelo <- mutate(get(df_name), fecha=as.Date(fecha)) %>%  filter(fecha %in% ventana)
+    
+    modelo <- feols(
+      data=df_modelo,
+      cluster="aduana",
+      fml=valor ~ igae + op_imp + op_exp + tdc_real + ped_imp + ped_exp + total + volumen + id | id_aduana,
+    )
+    
+    coeficiente <- modelo$coefficients[[variable]]
+    up_ci <- modelo$coefficients[[variable]] + 1.645 * modelo$se[[variable]]
+    low_ci <- modelo$coefficients[[variable]] - 1.645 * modelo$se[[variable]]
+    
+    #print(f)
+    #print(summary(modelo))
+    
+    nombre <- paste0("df_", f)
+    
+    df_resultados <- data.frame(
+      coef = coeficiente,
+      up = up_ci,
+      low = low_ci,
+      fecha = f
+    )
+    
+    list_opimp[[nombre]] <- df_resultados
+    
+  }
+  
+  op_imp <- bind_rows(list_opimp) %>% 
+    mutate(fecha = as.Date(fecha))
+  
+  return(op_imp)
+}
+
+# Relación de operaciones con TOTAL
+par(mfrow=c(2,2), bg=NA)
+roll_graph("ped_imp", "TOTAL")
+roll_graph("op_imp", "TOTAL")
+roll_graph("ped_exp", "TOTAL")
+roll_graph("op_exp", "TOTAL")
+dev.print(png, "output/v2/total_op.png", width = 3024, height = 1964, res = 400)
+dev.off()
+
+# Coeficientes de la Regresión
+coefs <- roll_coefs("volumen", "TOTAL") %>% 
+  left_join(id_fecha) %>% 
+  mutate(
+    tratamiento=ifelse(fecha>="2022-01-01", 1, 0)
+  )
+
+# Relación de volumen con TOTAL
+par(family="Montserrat", mar=c(2,2,1,1), bg=NA)
+
+plot(coefs$fecha, coefs$coef, ylim=c(min(coefs$low)-0.0002, max(coefs$up)+0.0002), t="l", lwd=6,
+     ylab = "Coeficiente Estimado", xlab = "Fecha", main = "Efecto del Volumen en Recaudación")
+abline(h=0, col="black", lty=3, lwd=2)
+abline(v=as.Date("2022-01-01"), col="firebrick", lty=3, lwd=4)
+
+subset1 <- filter(coefs, fecha<="2022-01-01")
+subset2 <- filter(coefs, fecha>"2022-01-01")
+
+modelo_s1 <- lm(subset1[["coef"]] ~ seq_along(subset1[["coef"]]))
+modelo_s2 <- lm(subset2[["coef"]] ~ seq_along(subset2[["coef"]]))
+
+lines(coefs$fecha[which(coefs$fecha<="2022-01-01")], predict(modelo_s1), col = "#1C5C4E", lwd = 3, lty="dashed")
+lines(coefs$fecha[which(coefs$fecha>"2022-01-01")], predict(modelo_s2), col = "#1C5C4E", lwd = 3, lty="dashed")
+
+lines(coefs$fecha, coefs$up, lwd=4, lty=1, col=rgb(t(col2rgb("gray25")) / 255, alpha=0.3))
+lines(coefs$fecha, coefs$low, lwd=4, lty=1, col=rgb(t(col2rgb("gray25")) / 255, alpha=0.3))
+
+dev.print(png, "output/v2/total_vol.png", width = 3024, height = 1964, res = 400)
+dev.off()
+
+
+# Relación de volumen con TOTAL y Periodo
+par(family="Montserrat", mar=c(2,2,1,1), bg=NA)
+
+plot(coefs$fecha, coefs$coef, ylim=c(min(coefs$low)-0.0002, max(coefs$up)+0.0002), t="l", lwd=6,
+     ylab = "Coeficiente Estimado", xlab = "Fecha", main = "Efecto del Volumen en Recaudación")
+abline(h=0, col="black", lty=3, lwd=2)
+
+period("2018-12-01", "2019-05-01", colores[1], colores[1], 0.1)
+period("2019-05-02", "2020-04-01", colores[2], colores[2], 0.1)
+period("2020-04-02", "2022-10-01", colores[3], colores[3], 0.1)
+period("2022-12-01", "2023-07-21", colores[4], colores[4], 0.1)
+period("2023-07-22", max(coefs$fecha), colores[5], colores[5], 0.1)
+
+subset1 <- filter(coefs, fecha<="2022-01-01")
+subset2 <- filter(coefs, fecha>"2022-01-01")
+
+modelo_s1 <- lm(subset1[["coef"]] ~ seq_along(subset1[["coef"]]))
+modelo_s2 <- lm(subset2[["coef"]] ~ seq_along(subset2[["coef"]]))
+
+#lines(coefs$fecha[which(coefs$fecha<="2022-01-01")], predict(modelo_s1), col = "#1C5C4E", lwd = 3, lty="dashed")
+#lines(coefs$fecha[which(coefs$fecha>"2022-01-01")], predict(modelo_s2), col = "#1C5C4E", lwd = 3, lty="dashed")
+
+lines(coefs$fecha, coefs$up, lwd=4, lty=1, col=rgb(t(col2rgb("firebrick")) / 255, alpha=0.3))
+lines(coefs$fecha, coefs$low, lwd=4, lty=1, col=rgb(t(col2rgb("firebrick")) / 255, alpha=0.3))
+
+dev.print(png, "output/v2/total_vol_periodo.png", width = 3024, height = 1964, res = 400)
+dev.off()
+
+
+#### Metaregresión -------------------------------------------------------------
+metaregresion <- lm(data=coefs, coef ~ tratamiento + id)
+summary(metaregresion)
+
+stargazer(coeftest(metaregresion))
+
+
+### Proyecciones ---------------------------------------------------------------
+ 
+total_proy <- total %>% mutate(id_aduana=as.numeric(id_aduana)) %>% glimpse()
+
+modelo_proyeccion <- feols(
+  data = total_proy, 
+  cluster="aduana", 
+  fml = valor ~ volumen + op_imp + op_exp + ped_imp + ped_exp + inpc + tdc_real + total + anam + id + igae | id_aduana + mes
+  )
+
+summary(modelo_proyeccion)
+stargazer(coeftest(modelo_proyeccion))
+
+coeficientes_proyeccion <- list()
+variables <- c("volumen", "op_imp", "op_exp", "ped_imp", "ped_exp", "inpc", "tdc_real", "total", "anam", "id", "igae")
+
+for (v in variables) {
+  coeficientes <- modelo_proyeccion$coefficients[[v]]
+  coeficientes_proyeccion[[v]] <- coeficientes
+}
+
+coeficientes_proyeccion <- bind_rows(coeficientes_proyeccion)
+
+# Efectos Fijos por Aduana
+efectos_aduana <- data.frame( 
+  id_aduana=as.numeric(names(fixef(modelo_proyeccion)$id_aduana)),
+  efectos_aduana=fixef(modelo_proyeccion)$id_aduana
+) 
+
+# Efectos Fijos por Fecha
+efectos_mes <- data.frame( 
+  mes=as.numeric(names(fixef(modelo_proyeccion)$mes)),
+  efectos_mes=fixef(modelo_proyeccion)$mes
+) 
+
+# Errores
+errores <- data.frame(
+  error = modelo_proyeccion$residuals
+)
+
+# Unir Efectos Fijos con DF
+df_proyeccion <- total_proy %>% 
+  left_join(
+    efectos_aduana, by="id_aduana"
+  ) %>% 
+  left_join(
+    efectos_mes, by="mes"
+  ) 
+
+# Predicciones por Aduana
+df_proyeccion <- df_proyeccion %>% 
+  mutate(
+    prediccion = 
+      efectos_mes + 
+      efectos_aduana +
+      volumen * coeficientes_proyeccion[["volumen"]][1] +
+      op_imp * coeficientes_proyeccion[["op_imp"]][1] +
+      op_exp * coeficientes_proyeccion[["op_exp"]][1] +
+      ped_imp * coeficientes_proyeccion[["ped_imp"]][1] +
+      ped_exp * coeficientes_proyeccion[["ped_exp"]][1] +
+      inpc * coeficientes_proyeccion[["inpc"]][1] +
+      tdc_real * coeficientes_proyeccion[["tdc_real"]][1] +
+      total * coeficientes_proyeccion[["total"]][1] +
+      id * coeficientes_proyeccion[["id"]][1] + 
+      igae * coeficientes_proyeccion[["igae"]][1]
+  ) %>% 
+  group_by(fecha) %>% 
+  summarise(
+    valor=sum(valor),
+    prediccion=sum(prediccion)
+  )
+
+# Cambios Prediccion
+cambios_prediccion <- c(0, df_proyeccion$prediccion)/100
+cambios_prediccion[is.infinite(cambios_prediccion) | is.nan(cambios_prediccion) | is.na(cambios_prediccion)] <- 0
+cambios_prediccion
+
+# Cambios en el Valor
+cambios_valor <- c(0, df_proyeccion$valor)/100
+cambios_valor[is.infinite(cambios_valor) | is.nan(cambios_valor) | is.na(cambios_valor)] <- 0
+cambios_valor
+
+# Serie de Recaudación Total
+recaudacion_total <- recaudacion %>% 
+  filter(
+    impuesto=="TOTAL"
+  ) %>% 
+  group_by(fecha) %>% 
+  summarise(
+    valor=sum(valor)
+    ) 
+
+total_impuestos <- recaudacion_total$valor
+fechas_impuestos <- recaudacion_total$fecha
+
+# Predicciones
+predicciones <- data.frame(
+  fechas=fechas_impuestos,
+  prediccion=rep(NA, length(fechas_impuestos)),
+  valor=rep(NA, length(fechas_impuestos))
+)
+predicciones
+
+# Loop para asignar valores
+predicciones[1, "valor"] <- total_impuestos[1]
+for (i in seq_along(fechas_impuestos)) {
+  predicciones[i+1,"valor"] <- predicciones[i, "valor"] * (1 + cambios_valor[i+1])
+}
+predicciones
+
+# Loop para asignar total
+predicciones[1, "prediccion"] <- total_impuestos[1]
+for (i in seq_along(fechas_impuestos)) {
+  predicciones[i+1,"prediccion"] <- predicciones[i, "prediccion"] * (1 + cambios_prediccion[i+1])
+}
+predicciones
+
+# DF Final
+predicciones <- filter(predicciones, !is.na(prediccion) & !is.na(valor) )
+predicciones
+
+# Visualización
+par(bg=NA)
+
+graph_tsline(
+  x=predicciones$fechas,
+  y=predicciones$valor,
+  intervalo="6 month",
+  color="#5A1F2E",
+  points=F,
+  lwd=6,
+  ylim=c(40000, 100000),
+  las=2,
+  date.format = "%Y-%b",
+  margins = c(6,5,0.5,0.5),
+  family = "Montserrat"
+)
+
+lines(predicciones$fechas, predicciones$prediccion, t='l', lwd=6, col="#315A4F")
+
+abline(v=as.Date("2022-01-01"), col="darkred", lwd=4, lty="dashed")
+
+legend(
+  "topleft",
+  col=c("#5A1F2E", "#315A4F"),
+  legend=c("Observado", "Predicción"),
+  lwd=6,
+  bty="n",
+  cex=1.2,
+)
+
+dev.print(png, "output/v2/predicciones.png", width = 3024, height = 1964, res = 400)
+dev.off()
+
+
+### Modelo con Dummys ----------------------------------------------------------
+
+df_final <- mutate(df_final, año=year(fecha), mes=month(fecha))
+
+
+# Indicadoras por mes
+dummys_mes <- data.frame(
+  mes=factor(1:12)
+)
+
+dummys_mes <- cbind(dummys_mes, model.matrix( ~ mes - 1, data=dummys_mes)) %>% 
+  mutate(mes=as.numeric(as.character(mes)))
+
+n_dummys_mes <- names(dummys_mes)[2:ncol(dummys_mes)]
+
+
+# Indicadoras por Año
+dummys_año <- data.frame(
+  año=factor(2018:2024)
+)
+
+dummys_año <- cbind(dummys_año, model.matrix( ~ año - 1, data=dummys_año)) %>% 
+  mutate(año=as.numeric(as.character(año)))
+
+n_dummys_año <- names(dummys_año)[2:ncol(dummys_año)]
+
+
+# Unir DF con dummys
+df_final <- df_final %>% 
+  left_join(
+    dummys_mes, by="mes"
+  ) %>% 
+  left_join(
+    dummys_año, by="año"
+  )
+
+#### Preeliminar (Sin Consumo Interno) -----------------------------------------
+
+
+for_modelo_dummy_1 <- as.formula(paste("valor ~",paste(n_dummys_año, collapse="+"), "+", paste(n_dummys_mes, collapse="+"), "+", "log(importaciones)"))
+
+modelo_dummy_1 <- lm(data=filter(df_final, impuesto=="TOTAL") %>% filter(!if_any(everything(), ~ is.na(.) | is.nan(.) | is.infinite(.))), 
+                     formula = for_modelo_dummy_1 )
+
+summary(modelo_dummy_1)
+
+
+df_modelo_dummy <- filter(df_final, impuesto=="TOTAL") 
+
+# Tabla
+stargazer(coeftest(modelo_dummy_1))
+
+
+##### Proyecciones -------
+
+coeficientes_proyeccion2 <- list()
+variables <- c("log(importaciones)", n_dummys_año[1:6], n_dummys_mes[1:11], "(Intercept)")
+
+for (v in variables) {
+  coeficientes <- modelo_dummy_1$coefficients[[v]]
+  coeficientes_proyeccion2[[v]] <- coeficientes
+}
+
+coeficientes_proyeccion2 <- bind_rows(coeficientes_proyeccion2)
+coeficientes_proyeccion2
+
+# Predicciones por Aduana
+
+ df_modelo_dummy <- df_modelo_dummy %>% 
+  mutate(
+    prediccion = 
+      coeficientes_proyeccion2[["(Intercept)"]][1] +
+      mes1 * coeficientes_proyeccion2[["mes1"]][1] + 
+      mes2 * coeficientes_proyeccion2[["mes2"]][1] + 
+      mes3 * coeficientes_proyeccion2[["mes3"]][1] + 
+      mes4 * coeficientes_proyeccion2[["mes4"]][1] + 
+      mes5 * coeficientes_proyeccion2[["mes5"]][1] + 
+      mes6 * coeficientes_proyeccion2[["mes6"]][1] + 
+      mes7 * coeficientes_proyeccion2[["mes7"]][1] + 
+      mes8 * coeficientes_proyeccion2[["mes8"]][1] + 
+      mes9 * coeficientes_proyeccion2[["mes9"]][1] + 
+      mes10 * coeficientes_proyeccion2[["mes10"]][1] + 
+      mes11 * coeficientes_proyeccion2[["mes11"]][1] +
+      año2018 * coeficientes_proyeccion2[["año2018"]][1] + 
+      año2019 * coeficientes_proyeccion2[["año2019"]][1] + 
+      año2020 * coeficientes_proyeccion2[["año2020"]][1] + 
+      año2021 * coeficientes_proyeccion2[["año2021"]][1] + 
+      año2022 * coeficientes_proyeccion2[["año2022"]][1] + 
+      año2023 * coeficientes_proyeccion2[["año2023"]][1] +
+      log(importaciones) * coeficientes_proyeccion2[["log(importaciones)"]][1]  
+  ) %>% 
+  group_by(fecha) %>% 
+  summarise(
+    prediccion=first(prediccion)
+  )
+
+cambios_predichos <- c(0, df_modelo_dummy$prediccion)
+ 
+# Serie de Recaudación Total
+recaudacion_total <- recaudacion %>% 
+  filter(
+    impuesto=="TOTAL"
+  ) %>% 
+  group_by(fecha) %>% 
+  summarise(
+    valor=sum(valor)
+  ) 
+
+total_impuestos <- recaudacion_total$valor
+fechas_impuestos <- recaudacion_total$fecha
+
+# Predicciones
+predicciones <- data.frame(
+  fechas=fechas_impuestos,
+  prediccion=rep(NA, length(fechas_impuestos)),
+  valor=recaudacion_total$valor
+)
+predicciones
+
+# Loop para asignar predicciones
+predicciones[1, "prediccion"] <- total_impuestos[1]
+for (i in seq_along(fechas_impuestos)) {
+  predicciones[i+1,"prediccion"] <- predicciones[i, "valor"] * (1 + cambios_predichos[i+1])
+}
+predicciones
+
+# DF Final
+predicciones <- filter(predicciones, !is.na(prediccion) & !is.na(valor) )
+predicciones
+
+# Visualización
+par(bg=NA)
+
+graph_tsline(
+  x=predicciones$fechas,
+  y=predicciones$valor,
+  intervalo="6 month",
+  color="gray55",
+  points=F,
+  lwd=6,
+  ylim=c(40000, 150000),
+  las=2,
+  date.format = "%Y-%b",
+  margins = c(6,5,0.5,0.5),
+  family = "Montserrat"
+)
+
+lines(predicciones$fechas, predicciones$prediccion, t='l', lwd=6, col="#315A4F")
+
+abline(v=as.Date("2022-01-01"), col="darkred", lwd=4, lty="dashed")
+
+legend(
+  "topleft",
+  col=c("gray55", "#315A4F"),
+  legend=c("Observado", "Predicción"),
+  lwd=6,
+  bty="n",
+  cex=1.2,
+)
+
+axis(2, lwd=3, col = "gray25", col.ticks = "gray25", tck=0.02, at=c(0, 1900000000000009))
+
+dev.print(png, "output/v2/predicciones2.png", width = 3024, height = 1964, res = 400)
+dev.off()
+            </code></pre>
+
         </div>
 
         </div>
@@ -408,6 +2275,7 @@
             </iframe>
             </div>
         </div>
+
     </div>
 </div>
 
